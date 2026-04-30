@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Site | Ithu Namma Kada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="seller" class="seller-page">
+  <section class="seller-login-shell" id="sellerLoginShell">
+    <div class="seller-login-card">
+      <div class="seller-login-brand">
+        <span class="brand-mark brand-logo-wrap">
+          <img src="assests/logo.jpeg" alt="Ithu Namma Kada logo" class="brand-logo">
+        </span>
+        <div>
+          <p class="eyebrow">Seller Login</p>
+          <h1>Ithu Namma Kada Seller Site</h1>
+          <p class="section-copy">Enter the correct username and password to open the seller portal.</p>
+        </div>
+      </div>
+
+      <form id="sellerLoginForm" class="product-form seller-login-form">
+        <label>
+          Username
+          <input id="sellerUsername" type="text" placeholder="Enter username" required>
+        </label>
+
+        <label>
+          Password
+          <div class="password-field">
+            <input id="sellerPassword" type="password" placeholder="Enter password" required>
+            <button id="sellerPasswordToggle" class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">👁</button>
+          </div>
+        </label>
+
+        <p id="sellerLoginError" class="login-error hidden">Incorrect username or password.</p>
+
+        <div class="form-actions">
+          <button class="button" type="submit">Login To Seller Site</button>
+          <a href="index.html" class="button button-secondary">Back To Main Website</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="site-shell seller-shell hidden" id="sellerDashboardShell">
+    <header class="seller-topbar">
+      <a href="index.html" class="brand seller-brand">
+        <span class="brand-mark brand-logo-wrap">
+          <img src="assests/logo.jpeg" alt="Ithu Namma Kada logo" class="brand-logo">
+        </span>
+        <span>
+          <strong>Ithu Namma Kada</strong>
+          <small>Seller Site</small>
+        </span>
+      </a>
+
+      <div class="seller-top-actions">
+        <a href="index.html" class="button button-secondary">Open Main Website</a>
+        <button id="sellerLogoutButton" class="button button-secondary" type="button">Logout</button>
+      </div>
+    </header>
+
+    <header class="dashboard-hero seller-hero-panel">
+      <div class="dashboard-intro">
+        <p class="eyebrow">Seller Admin Portal</p>
+        <h1>Manage products in a separate seller site linked to the main website.</h1>
+        <p class="hero-text">
+          This seller page is separate from the customer storefront. Use it to add, edit, and remove casual men's wear items,
+          and the updates will appear automatically on the main website.
+        </p>
+      </div>
+
+      <div class="dashboard-actions seller-actions-column">
+        <div class="seller-note-card">
+          <span class="contact-label">Connected Setup</span>
+          <h3>Main Website + Seller Site</h3>
+          <p>The main website is for customers. This linked seller site is only for managing inventory and product details.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="dashboard-stats">
+      <article class="dash-stat">
+        <strong>Separate Seller Site</strong>
+        <span>Independent admin page linked from the main website</span>
+      </article>
+      <article class="dash-stat">
+        <strong>Inventory Management</strong>
+        <span>Track product names, stock, price, and category</span>
+      </article>
+      <article class="dash-stat">
+        <strong>Live Store Sync</strong>
+        <span>Saved items appear on the customer website view</span>
+      </article>
+    </section>
+
+    <main class="seller-layout">
+      <section class="panel form-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Product Editor</p>
+            <h2 id="formTitle">Add New Product</h2>
+            <p class="section-copy">Use this seller form to create or update items shown on the main storefront.</p>
+          </div>
+        </div>
+
+        <form id="productForm" class="product-form">
+          <input type="hidden" id="productId">
+
+          <label>
+            Product Name
+            <input id="name" type="text" placeholder="Example: Checked Casual Shirt" required>
+          </label>
+
+          <label>
+            Category
+            <input id="category" type="text" placeholder="Example: Casual Shirt, T-Shirt, Jeans" required>
+          </label>
+
+          <div class="form-split">
+            <label>
+              Price
+              <input id="price" type="number" min="0" step="0.01" placeholder="1499" required>
+            </label>
+
+            <label>
+              Stock
+              <input id="stock" type="number" min="0" step="1" placeholder="12" required>
+            </label>
+          </div>
+
+          <div class="form-split">
+            <label>
+              Color
+              <input id="color" type="text" placeholder="Example: Navy Blue" required>
+            </label>
+
+            <label>
+              Image URL
+              <input id="image" type="url" placeholder="https://example.com/product.jpg">
+            </label>
+          </div>
+
+          <label>
+            Upload Product Photo
+            <input id="imageFile" type="file" accept="image/*">
+          </label>
+
+          <div class="image-preview-card hidden" id="imagePreviewCard">
+            <p class="contact-label">Selected Image Preview</p>
+            <img id="imagePreview" class="image-preview" alt="Selected product preview">
+          </div>
+
+          <label>
+            Description
+            <textarea id="description" rows="5" placeholder="Write a short product description" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="button" type="submit">Save Product</button>
+            <button class="button button-secondary" id="resetButton" type="button">Clear Form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel inventory-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Inventory List</p>
+            <h2>Current Products</h2>
+            <p class="section-copy">All products listed here are connected to the main website product section.</p>
+          </div>
+        </div>
+
+        <div id="sellerList" class="seller-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
