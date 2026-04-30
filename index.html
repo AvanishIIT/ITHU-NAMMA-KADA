@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ithu Namma Kada | Casual Men's Wear Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="store">
+  <div class="site-shell">
+    <header class="hero hero-business">
+      <nav class="topbar">
+        <a href="index.html" class="brand">
+          <span class="brand-mark brand-logo-wrap">
+            <img src="assests/logo.jpeg" alt="Ithu Namma Kada logo" class="brand-logo">
+          </span>
+          <span>
+            <strong>Ithu Namma Kada</strong>
+            <small>Casual Men's Wear Store</small>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#services">Home</a>
+          <a href="#collection">Products</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid hero-grid-business">
+        <div class="hero-copy">
+          <p class="eyebrow">Trusted Casual Men's Wear Store</p>
+          <h1>Trendy casual men's wear for everyday comfort and style.</h1>
+          <p class="hero-text">
+            Inspired by a business-style storefront layout, this website presents your casual men's wear collection
+            with a stronger brand image, direct contact options, and a more structured customer journey.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#collection">View Products</a>
+            <a class="button button-secondary" href="#contact">Contact Store</a>
+          </div>
+
+          <div class="hero-stats">
+            <article>
+              <strong>Quality Styles</strong>
+              <span>Curated casual shirts, T-shirts, jeans, and essentials</span>
+            </article>
+            <article>
+              <strong>Direct Support</strong>
+              <span>Phone and location visible for quick customer contact</span>
+            </article>
+            <article>
+              <strong>Seller Managed</strong>
+              <span>Products can be updated anytime from the dashboard</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-visual-business">
+          <div class="visual-frame visual-primary">
+            <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1200&q=80" alt="Men's fashion store">
+          </div>
+          <div class="visual-card business-card">
+            <p class="eyebrow">Store Highlights</p>
+            <h2>Professional online presence for a local casual men's wear business.</h2>
+            <p>
+              Customers can explore products, view contact details, and reach the store quickly, while the seller manages the inventory from a separate page.
+            </p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section service-strip business-strip" id="services">
+        <article>
+          <h3>Premium Product Display</h3>
+          <p>Clear business-style layout with a polished storefront and easy browsing.</p>
+        </article>
+        <article>
+          <h3>Category-Based Shopping</h3>
+          <p>Customers can explore casual shirts, T-shirts, jeans, cargos, and more.</p>
+        </article>
+        <article>
+          <h3>Visible Contact Details</h3>
+          <p>Phone and location are placed clearly so customers can reach the shop fast.</p>
+        </article>
+      </section>
+
+      <section class="section info-band">
+        <div class="info-card">
+          <span class="contact-label">Phone</span>
+          <strong>+91 9443594787</strong>
+          <p>Call for product details, availability, sizes, and direct shop enquiries.</p>
+        </div>
+        <div class="info-card">
+          <span class="contact-label">Location</span>
+          <strong>Attur and Thalaivasal Branches</strong>
+          <p>Visit the nearest branch to check the latest casual men's wear collection in person.</p>
+        </div>
+        <div class="info-card">
+          <span class="contact-label">Branches</span>
+          <strong>2 Active Branches</strong>
+          <p>Serving customers from Attur and Thalaivasal with casual men's wear collections.</p>
+        </div>
+        <div class="info-card">
+          <span class="contact-label">Store Focus</span>
+          <strong>Casual Shirts, T-Shirts, Jeans</strong>
+          <p>Designed only for casual men's wear and tailored for a more professional business identity.</p>
+        </div>
+      </section>
+
+      <section class="section collection-panel" id="collection">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Our Products</p>
+            <h2>Explore The Collection</h2>
+            <p class="section-copy">Browse the latest casual men's wear items uploaded by the shop owner.</p>
+          </div>
+
+          <div class="catalog-actions">
+            <input id="searchInput" class="search-input" type="search" placeholder="Search shirts, T-shirts, jeans, colors">
+            <select id="categoryFilter" class="search-input">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+
+        <div id="storeStatus" class="store-status hidden" aria-live="polite"></div>
+
+        <div id="emptyState" class="empty-state hidden">
+          <h3>No products found</h3>
+          <p>Try another search or check back later for more product updates.</p>
+        </div>
+      </section>
+
+      <section class="section story-panel business-about" id="about">
+        <div class="story-copy">
+          <p class="eyebrow">About Us</p>
+          <h2>Ithu Namma Kada is a casual men's wear store serving customers through two branches.</h2>
+          <p>
+            Ithu Namma Kada focuses on casual men's wear with collections such as casual shirts, T-shirts,
+            jeans, and everyday essentials. The shop is built around direct customer service, easy product enquiry,
+            and a strong local presence.
+          </p>
+          <p>
+            From the details shared, the business has active branches in Attur and Thalaivasal, helping nearby customers
+            visit the store directly and shop the latest arrivals with personal support.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <span>01</span>
+            <h3>Attur Branch</h3>
+            <p>Located near Mythili Mess, opposite HDFC Bank, Attur, with casual men's wear collections for local customers.</p>
+          </article>
+          <article class="story-card">
+            <span>02</span>
+            <h3>Thalaivasal Branch</h3>
+            <p>Located opposite Bharath Petrol Bunk, Aragalur Pirivu Road, Mummudi, Thalaivasal, serving nearby shoppers.</p>
+          </article>
+          <article class="story-card">
+            <span>03</span>
+            <h3>Store Identity</h3>
+            <p>A local casual men's wear shop with direct phone support, branch access, and a customer-first shopping approach.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-panel" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Get in touch with Ithu Namma Kada branches.</h2>
+          <p class="section-copy">
+            Customers can contact the shop directly for casual wear details, branch directions, product availability,
+            and in-store shopping support at Attur and Thalaivasal.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <span class="contact-label">Attur Branch</span>
+            <h3>+91 9443594787</h3>
+            <p>Landmark: Near Mythili Mess, Opposite HDFC Bank, Attur.</p>
+            <a class="contact-link contact-link-instagram" href="https://www.instagram.com/ithu_namma_kada_attur?igsh=M3JiZWRzNmRtOTll" target="_blank" rel="noopener noreferrer" aria-label="Open Attur branch Instagram">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7Zm9.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.9A5.1 5.1 0 1 1 6.9 12 5.1 5.1 0 0 1 12 6.9Zm0 1.8A3.3 3.3 0 1 0 15.3 12 3.3 3.3 0 0 0 12 8.7Z"/>
+                </svg>
+              </span>
+              <span>Instagram</span>
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-label">Thalaivasal Branch</span>
+            <h3>+91 9443594787</h3>
+            <p>Landmark: Opposite Bharath Petrol Bunk, Aragalur Pirivu Road, Mummudi, Thalaivasal.</p>
+            <a class="contact-link contact-link-instagram" href="https://www.instagram.com/ithu_namma_kada_thalaivasal?igsh=dThxdGk1dmRvMmVj" target="_blank" rel="noopener noreferrer" aria-label="Open Thalaivasal branch Instagram">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7Zm9.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.9A5.1 5.1 0 1 1 6.9 12 5.1 5.1 0 0 1 12 6.9Zm0 1.8A3.3 3.3 0 1 0 15.3 12 3.3 3.3 0 0 0 12 8.7Z"/>
+                </svg>
+              </span>
+              <span>Instagram</span>
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-label">Customer Support</span>
+            <h3>Casual Men's Wear Enquiry</h3>
+            <p>Call for product availability, sizes, latest arrivals, and directions to the nearest branch.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Ithu Namma Kada</strong>
+        <p>Professional storefront for casual men's wear collections across Attur and Thalaivasal branches.</p>
+      </div>
+      <p>(c) 2026 Ithu Namma Kada. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
