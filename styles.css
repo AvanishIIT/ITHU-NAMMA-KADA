@@ -906,7 +906,12 @@ button {
 
 @media (max-width: 760px) {
   .site-shell {
-    width: min(100% - 20px, 1240px);
+    width: min(100% - 18px, 1240px);
+  }
+
+  .hero,
+  .dashboard-hero {
+    padding: 18px 0 26px;
   }
 
   .topbar,
@@ -919,21 +924,195 @@ button {
     align-items: start;
   }
 
+  .topbar {
+    gap: 14px;
+  }
+
+  .brand {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .brand-mark {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+  }
+
+  .brand strong {
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+
+  .brand small {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    text-align: center;
+    padding: 11px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.74);
+    border: 1px solid rgba(16, 24, 40, 0.06);
+  }
+
   .catalog-actions,
   .nav-links {
     width: 100%;
+  }
+
+  .hero-grid,
+  .hero-grid-business {
+    gap: 22px;
+    padding: 18px 0 10px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+    line-height: 0.98;
+    max-width: 9ch;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+    line-height: 1.05;
+  }
+
+  .hero-text,
+  .section-copy,
+  .story-copy p,
+  .footer p,
+  .seller-item p,
+  .dash-stat span,
+  .info-card p,
+  .contact-card p {
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .hero-actions .button,
+  .form-actions .button,
+  .seller-actions .button {
+    width: 100%;
+  }
+
+  .hero-stats {
+    margin-top: 24px;
+  }
+
+  .hero-stats article,
+  .dash-stat,
+  .service-strip article,
+  .story-card,
+  .info-card,
+  .contact-card {
+    padding: 18px;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    display: grid;
+    gap: 12px;
   }
 
   .search-input {
     width: 100%;
   }
 
+  .visual-frame,
+  .visual-card {
+    position: static;
+  }
+
   .visual-primary {
-    inset: 0 0 140px 0;
+    inset: auto;
+    min-height: 280px;
+  }
+
+  .visual-frame img {
+    min-height: 280px;
   }
 
   .visual-card {
-    width: 92%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .section {
+    padding: 20px 0 26px;
+  }
+
+  .collection-panel,
+  .story-panel,
+  .contact-panel,
+  .panel,
+  .seller-hero-panel,
+  .seller-login-card {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .section-heading,
+  .dashboard-hero {
+    gap: 16px;
+  }
+
+  .catalog-actions {
+    gap: 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .product-image {
+    height: 260px;
+  }
+
+  .product-body {
+    padding: 18px;
+  }
+
+  .product-meta,
+  .seller-meta,
+  .product-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-meta {
+    margin-bottom: 12px;
+  }
+
+  .price {
+    font-size: 1.05rem;
+  }
+
+  .product-description {
+    min-height: auto;
+  }
+
+  .product-buy-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-link-instagram {
+    width: 100%;
+    justify-content: center;
   }
 
   .form-split,
@@ -941,12 +1120,100 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .seller-item {
+    gap: 14px;
+    padding: 16px;
+  }
+
   .seller-thumb {
     width: 100%;
-    height: 240px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-shell {
+    width: min(100% - 14px, 1240px);
+  }
+
+  .brand {
+    align-items: flex-start;
+  }
+
+  .brand-mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    padding: 6px;
+  }
+
+  .nav-links a:not(.button) {
+    padding: 10px 8px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(16, 24, 40, 0.06);
   }
 
   h1 {
-    max-width: none;
+    font-size: clamp(2rem, 11vw, 2.7rem);
+    max-width: 8.5ch;
+  }
+
+  .hero-visual {
+    min-height: auto;
+  }
+
+  .visual-primary {
+    min-height: 220px;
+  }
+
+  .visual-card {
+    padding: 16px;
+  }
+
+  .visual-frame img {
+    min-height: 220px;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .button {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 0.95rem;
+  }
+
+  .collection-panel,
+  .story-panel,
+  .contact-panel,
+  .panel,
+  .seller-hero-panel,
+  .seller-login-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .product-image {
+    height: 210px;
+  }
+
+  .product-badge {
+    left: 12px;
+    bottom: 12px;
+    font-size: 0.76rem;
+  }
+
+  .tag,
+  .stock-pill {
+    font-size: 0.78rem;
+  }
+
+  .contact-card h3,
+  .story-card h3,
+  .service-strip article h3 {
+    font-size: 1.12rem;
   }
 }
