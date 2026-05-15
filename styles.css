@@ -1100,7 +1100,6 @@ button {
   .price {
     font-size: 1.05rem;
   }
-
   .product-description {
     min-height: auto;
   }
@@ -1147,6 +1146,10 @@ button {
     padding: 6px;
   }
 
+  .nav-links {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
   .nav-links a:not(.button) {
     padding: 10px 8px;
     border-radius: 12px;
@@ -1174,7 +1177,6 @@ button {
   .visual-frame img {
     min-height: 220px;
   }
-
   .eyebrow {
     font-size: 0.72rem;
     letter-spacing: 0.14em;
